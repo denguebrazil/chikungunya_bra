@@ -1,10 +1,10 @@
-# 🦟 Análise de Casos de Chikungunya — Brasil, Estados e Municípios
+# Análise de Casos de Chikungunya — Brasil, Estados e Municípios
 
 > Projeto de vigilância epidemiológica para acompanhamento de casos **notificados** e **prováveis** de Chikungunya no Brasil, com visualizações automatizadas em nível nacional, estadual e municipal.
 
 ---
 
-## 📖 Sobre o projeto
+## Sobre o projeto
 
 A Chikungunya é uma arbovirose transmitida pelo mosquito *Aedes aegypti* e representa um desafio contínuo para a saúde pública brasileira. Monitorar a evolução dos casos ao longo do tempo e do espaço é essencial para orientar ações de vigilância, prevenção e resposta rápida.
 
@@ -17,11 +17,11 @@ Este repositório reúne dois notebooks em Python que transformam bases de dados
 
 Ao final da execução, os notebooks geram automaticamente **gráficos em alta resolução (.png)** e um **relatório consolidado em PDF**, prontos para serem compartilhados com equipes técnicas, gestores ou apresentados em reuniões.
 
-> 💡 **Não é preciso ser programador para usar este projeto.** As instruções abaixo foram escritas para que qualquer pessoa — mesmo sem experiência em tecnologia — consiga instalar as ferramentas necessárias e rodar as análises.
+> **Não é preciso ser programador para usar este projeto.** As instruções abaixo foram escritas para que qualquer pessoa — mesmo sem experiência em tecnologia — consiga instalar as ferramentas necessárias e rodar as análises.
 
 ---
 
-## 🔎 O que o projeto entrega
+## Outputs de análise
 
 - **Mapa coroplético do Brasil**, colorindo cada estado de acordo com o número de casos prováveis;
 - **Gráficos de barras** com a distribuição de casos por UF, por município e por semana epidemiológica;
@@ -34,18 +34,18 @@ Tudo isso pode ser gerado para o **Brasil como um todo**, para **um estado espec
 
 ---
 
-## 🗂️ Fontes de dados utilizadas
+## Fontes de dados utilizadas
 
 | Sigla | Nome completo | O que fornece |
 |---|---|---|
 | **SINAN** | Sistema de Informação de Agravos de Notificação | Casos notificados e classificação final (confirmado, descartado, em investigação) |
 | **GAL** | Gerenciador de Ambiente Laboratorial | Resultados de exames laboratoriais (RT-PCR), incluindo exames realizados e positivos |
 
-> ⚠️ **Atenção — dados sensíveis.** As bases do SINAN e do GAL contêm informações de saúde e não são distribuídas junto a este repositório. Cada usuário deve obter suas próprias bases de dados, respeitando as normas de acesso e proteção de dados de sua instituição (LGPD, sigilo em saúde, etc.). O código foi feito para ler arquivos com nomes e estrutura específicos — veja a seção [Estrutura de arquivos esperada](#-estrutura-de-arquivos-esperada).
+> **Atenção — dados sensíveis.** As bases do SINAN e do GAL contêm informações de saúde e não são distribuídas junto a este repositório. Cada usuário deve obter suas próprias bases de dados, respeitando as normas de acesso e proteção de dados de sua instituição (LGPD, sigilo em saúde, etc.). O código foi feito para ler arquivos com nomes e estrutura específicos — veja a seção [Estrutura de arquivos esperada](#-estrutura-de-arquivos-esperada).
 
 ---
 
-## 🧰 Tecnologias usadas
+## Tecnologias usadas
 
 O projeto foi desenvolvido em **Python**, dentro de **Jupyter Notebook**, utilizando as seguintes bibliotecas:
 
@@ -62,11 +62,11 @@ O projeto foi desenvolvido em **Python**, dentro de **Jupyter Notebook**, utiliz
 | [reportlab](https://www.reportlab.com/) | Geração automática dos relatórios em PDF |
 | [tabulate](https://pypi.org/project/tabulate/) | Formatação de tabelas |
 
-Não é necessário conhecer essas bibliotecas para usar o projeto — elas trabalham "por trás das cenas" quando o código é executado.
+Não é necessário conhecer essas bibliotecas para usar o projeto — elas trabalham em segundo plano quando o código é executado.
 
 ---
 
-## ⚙️ Instalação
+## Instalação
 
 ### 1. Pré-requisitos
 
@@ -75,8 +75,7 @@ Antes de começar, você precisa ter instalado em seu computador:
 1. **Python** (versão 3.9 ou superior) — [baixar aqui](https://www.python.org/downloads/)
 2. **Jupyter Notebook** ou **JupyterLab** (ambiente onde os arquivos `.ipynb` são executados)
 3. **Git** (opcional, apenas se for clonar o repositório pela linha de comando) — [baixar aqui](https://git-scm.com/downloads)
-
-> 💡 Se você nunca instalou Python antes, uma alternativa mais simples é instalar o [Anaconda](https://www.anaconda.com/download), que já vem com Python, Jupyter e a maioria das bibliotecas necessárias em um único pacote.
+4. **Editor de código**, que pode ser o VS Code, Anaconda ou Google Colab (utilizado online, não precisa de instalação)
 
 ### 2. Baixar o projeto
 
@@ -131,7 +130,7 @@ Os arquivos intermediários e finais (planilhas tratadas, gráficos `.png` e rel
 
 ---
 
-## ▶️ Como usar
+## Como usar
 
 1. Coloque os arquivos de dados na pasta do projeto, conforme descrito acima;
 2. Abra o notebook desejado no Jupyter;
@@ -158,7 +157,7 @@ Os arquivos intermediários e finais (planilhas tratadas, gráficos `.png` e rel
 
 ---
 
-## 🤝 Como contribuir
+## Como contribuir
 
 Contribuições são muito bem-vindas, seja você da área de dados, epidemiologia ou apenas alguém com uma boa ideia de melhoria!
 
@@ -187,20 +186,14 @@ Se preferir, também é possível contribuir apenas relatando problemas (*issues
 
 ---
 
-## 📄 Licença
+## Licença
 
 Este projeto está disponível sob os termos que forem definidos pelo mantenedor do repositório. Recomenda-se incluir uma licença de código aberto (como [MIT](https://opensource.org/licenses/MIT) ou [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.html)) para deixar claro como o código pode ser usado, modificado e distribuído.
 
-> ⚠️ Lembre-se: a **licença do código** é independente da **confidencialidade dos dados de saúde** utilizados como insumo. Mesmo que o código seja aberto, os dados do SINAN e do GAL devem continuar sendo tratados conforme a legislação vigente de proteção de dados e sigilo em saúde.
+> A **licença do código** é independente da **confidencialidade dos dados de saúde** utilizados como insumo. Mesmo que o código seja aberto, os dados do SINAN e do GAL devem continuar sendo tratados conforme a legislação vigente de proteção de dados e sigilo em saúde.
 
 ---
 
-## 🙋 Créditos
+## Créditos
 
-Algoritmos originalmente desenvolvidos pela equipe **Dengue Brazil**, com foco em apoiar a vigilância epidemiológica de arboviroses no país.
-
----
-
-<p align="center">
-<i>Dados salvam vidas quando bem interpretados. 📊🦟</i>
-</p>
+Algoritmos originalmente desenvolvidos por **Dengue Brazil**, com foco em apoiar a vigilância epidemiológica de arboviroses no país.
